@@ -18,8 +18,8 @@
 
 DEFAULT_PACKAGE_GIT_URL="https://github.com/delphix/fio.git"
 
-UPSTREAM_GIT_URL=https://github.com/axboe/fio.git
-UPSTREAM_GIT_BRANCH=master
+#UPSTREAM_GIT_URL=https://github.com/axboe/fio.git
+#UPSTREAM_GIT_BRANCH=master
 
 function build() {
         logmust cd "$WORKDIR/repo/fio"
