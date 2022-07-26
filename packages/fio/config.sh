@@ -21,6 +21,23 @@ DEFAULT_PACKAGE_GIT_URL="https://github.com/delphix/fio.git"
 #UPSTREAM_GIT_URL=https://github.com/axboe/fio.git
 #UPSTREAM_GIT_BRANCH=master
 
+function prepare() {
+        logmust install_pkgs \
+            libaio-dev \
+            librdmacm-dev \
+            libibverbs-dev \
+            librbd-dev \
+            libgtk2.0-dev \
+            libcairo2-dev \
+            libnuma-dev \
+            flex \
+            bison \
+            libglusterfs-dev \
+            libpmem-dev \
+            libpmemblk-dev
+}
+
+
 function build() {
         logmust cd "$WORKDIR/repo/"
         logmust dpkg-buildpackage -b -us -uc
