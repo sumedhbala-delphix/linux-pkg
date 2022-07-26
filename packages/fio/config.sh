@@ -41,5 +41,5 @@ function prepare() {
 function build() {
         logmust cd "$WORKDIR/repo/"
         logmust dpkg-buildpackage -b -us -uc
-        logmust mv ./*deb "$WORKDIR/artifacts/"
+        logmust mv $WORKDIR/*deb "$WORKDIR/artifacts/"
 }
